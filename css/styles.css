@@ -1428,3 +1428,22 @@ h1, h2, h3, h4 {
     --admin-gradient: linear-gradient(135deg, #ea580c, #c2410c);
     --user-gradient: linear-gradient(135deg, #f97316, #ea580c);
 }
+
+/* QUICK FIX: Make admin button smaller */
+#adminToggleBtn {
+    padding: 5px 10px !important;
+    font-size: 0.8rem !important;
+    height: 30px !important;
+    min-width: auto !important;
+}
+
+#adminToggleBtn .icon-small {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+/* Move it up if blocking messages */
+.admin-controls {
+    top: 10px !important;
+    right: 10px !important;
+}
