@@ -438,44 +438,44 @@ h1, h2, h3, h4 {
 }
 
 /* Owner Messages - INSANELY GOOD POPPY */
+/* Owner Messages - SIMPLE FIX - BIG AND VISIBLE */
 .message.owner {
-    max-width: 75%;
-    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.1), rgba(220, 38, 38, 0.1));
-    border: 2px solid;
-    border-image: var(--owner-gradient) 1;
-    animation: ownerMessagePop 0.5s ease;
-    box-shadow: var(--shadow-xl), 0 0 20px rgba(251, 191, 36, 0.3);
+    max-width: 80%;
+    background: linear-gradient(135deg, #fffbeb, #fef3c7) !important;
+    border: 3px solid #fbbf24 !important;
+    box-shadow: 0 10px 25px rgba(251, 191, 36, 0.4) !important;
     position: relative;
-    overflow: hidden;
+    margin: 15px 0;
+    padding: 18px !important;
+    font-size: 1.1rem !important;
+    min-height: 80px !important;
 }
 
-@keyframes ownerMessagePop {
-    0% {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+/* Make text black and big */
+.message.owner .message-content {
+    color: #000000 !important;
+    font-weight: 500 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.5 !important;
 }
 
-.message.owner::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: var(--owner-gradient);
-    z-index: -1;
-    border-radius: var(--border-radius);
-    opacity: 0.3;
+/* Make username stand out */
+.message.owner .message-username {
+    color: #92400e !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
 }
 
+/* Owner badge - simple and visible */
+.role-badge.owner {
+    background: linear-gradient(135deg, #fbbf24, #dc2626) !important;
+    color: white !important;
+    padding: 5px 12px !important;
+    border-radius: 15px !important;
+    font-weight: 700 !important;
+    margin-left: 10px !important;
+    font-size: 0.8rem !important;
+}
 /* Admin Messages */
 .message.admin {
     background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(124, 58, 237, 0.1));
