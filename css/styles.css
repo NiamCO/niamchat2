@@ -1447,3 +1447,15 @@ h1, h2, h3, h4 {
     top: 10px !important;
     right: 10px !important;
 }
+
+
+/* SIMPLE FIX: Make private chat button look normal */
+#privateChatBtn {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+}
+
+#privateChatBtn:hover {
+    background: rgba(59, 130, 246, 0.05);
+}
