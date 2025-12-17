@@ -653,8 +653,8 @@ class ChatCore {
         }
         
         // Check message length
-        if (text.length > 1000) {
-            this.showError('Message too long (max 1000 characters).');
+        if (text.length > 10000) {
+            this.showError('Message too long (max 10000 characters).');
             return;
         }
         
@@ -669,12 +669,12 @@ class ChatCore {
         
         if (messageInput && charCount) {
             const length = messageInput.value.length;
-            charCount.textContent = `${length}/1000`;
+            charCount.textContent = `${length}/10000`;
             
             // Change color if near limit
-            if (length > 900) {
+            if (length > 9000) {
                 charCount.style.color = 'var(--warning-color)';
-            } else if (length > 1000) {
+            } else if (length > 10000) {
                 charCount.style.color = 'var(--danger-color)';
             } else {
                 charCount.style.color = 'var(--text-secondary)';
